@@ -16,7 +16,7 @@ body{font-family:'Inter','Noto Sans SC',system-ui,sans-serif;background:var(--bg
 .hb{display:inline-block;background:rgba(255,255,255,.15);padding:4px 14px;border-radius:20px;font-size:12px;font-weight:600;letter-spacing:.5px;margin-bottom:12px}
 .h h1{font-size:32px;font-weight:900;letter-spacing:-1px;margin-bottom:4px}
 .h .sub{font-size:15px;opacity:.7;font-weight:400}
-.hs{display:flex;gap:40px;margin-top:20px;position:relative;z-index:1}
+.hs{display:flex;gap:40px;margin-top:20px;position:relative;z-index:1;flex-wrap:wrap}
 .hs .v{font-size:24px;font-weight:800}
 .hs .l{font-size:12px;opacity:.65}
 .st{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:700;color:var(--text);margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px}
@@ -36,7 +36,7 @@ body{font-family:'Inter','Noto Sans SC',system-ui,sans-serif;background:var(--bg
 .th{padding:18px 24px;border-bottom:1px solid var(--bd);display:flex;align-items:center;justify-content:space-between}
 .th h3{font-size:15px;font-weight:700}
 .ts{overflow-x:auto}
-table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:1100px}
+table{width:100%;border-collapse:collapse;font-size:13.5px;min-width:1200px}
 thead{background:#f9fafb}
 thead th{padding:11px 12px;text-align:left;font-weight:600;font-size:11px;color:var(--t3);text-transform:uppercase;letter-spacing:.3px;white-space:nowrap}
 thead th.num{text-align:right}
@@ -50,9 +50,14 @@ td.pf{font-weight:600}
 td.link a{color:var(--a);text-decoration:none;font-size:12px;font-weight:500;padding:4px 10px;border-radius:6px;transition:all .15s}
 td.link a:hover{background:var(--al)}
 .cb{display:inline-block;padding:3px 10px;border-radius:6px;font-weight:600;font-size:13px}
+.analysis{background:var(--card);border-radius:var(--rd);padding:24px;box-shadow:var(--sh);border:1px solid var(--bd);margin-bottom:24px}
+.analysis h3{font-size:15px;font-weight:700;margin-bottom:16px}
+.analysis ul{list-style:none;padding:0}
+.analysis li{padding:8px 0;border-bottom:1px solid #f3f4f6;font-size:14px;line-height:1.6}
+.analysis li:last-child{border-bottom:none}
 footer{text-align:center;margin-top:32px;font-size:12px;color:var(--t3)}
 @media(max-width:1200px){.kg,.kg6{grid-template-columns:repeat(4,1fr)}.cg{grid-template-columns:1fr}}
-@media(max-width:768px){.c{padding:16px 12px}.kg,.kg6{grid-template-columns:repeat(2,1fr)}.h{padding:24px}.h h1{font-size:22px}.hs{gap:20px;flex-wrap:wrap}.kc .kv{font-size:20px}}
+@media(max-width:768px){.c{padding:16px 12px}.kg,.kg6{grid-template-columns:repeat(2,1fr)}.h{padding:24px}.h h1{font-size:22px}.hs{gap:20px}.kc .kv{font-size:20px}}
 </style>
 </head>
 <body>
@@ -63,71 +68,91 @@ footer{text-align:center;margin-top:32px;font-size:12px;color:var(--t3)}
 <div class="sub">Trade-In Business Weekly Report · 2026年5月11日 - 5月17日</div>
 <div class="hs">
 <div class="hs-d"><div class="v">8</div><div class="l">覆盖国家</div></div>
-<div class="hs-d"><div class="v">320</div><div class="l">累计收机</div></div>
-<div class="hs-d"><div class="v">136</div><div class="l">已销售</div></div>
-<div class="hs-d"><div class="v">¥109,362</div><div class="l">销售收入</div></div>
+<div class="hs-d"><div class="v">338</div><div class="l">累计收机</div></div>
+<div class="hs-d"><div class="v">160</div><div class="l">已销售</div></div>
+<div class="hs-d"><div class="v">¥144,228</div><div class="l">销售收入</div></div>
+<div class="hs-d"><div class="v">¥71,345</div><div class="l">库存金额</div></div>
 </div></div></div>
 
 <div class="st"><span>📦 运营指标</span><span class="ln"></span></div>
-<div class="kg">
-<div class="kc"><div class="kl">累计收机数量</div><div class="kv">320</div><div class="ks">台</div></div>
-<div class="kc"><div class="kl">旧机销售数量</div><div class="kv g">136</div><div class="ks">消化率 42.5%</div></div>
-<div class="kc"><div class="kl">库存数量</div><div class="kv o">184</div><div class="ks">占比 57.5%</div></div>
-<div class="kc"><div class="kl">销售周转天数</div><div class="kv p">2.75</div><div class="ks">天</div></div>
-<div class="kc"><div class="kl">平均在库天数</div><div class="kv">14.0</div><div class="ks">天</div></div>
+<div class="kg6">
+<div class="kc"><div class="kl">累计收机数量</div><div class="kv">338</div><div class="ks">台</div></div>
+<div class="kc"><div class="kl">旧机销售数量</div><div class="kv g">160</div><div class="ks">消化率 47.3%</div></div>
+<div class="kc"><div class="kl">库存数量</div><div class="kv o">178</div><div class="ks">占比 52.7%</div></div>
+<div class="kc"><div class="kl">库存金额(RMB)</div><div class="kv r">¥71,345</div><div class="ks">占压资金</div></div>
+<div class="kc"><div class="kl">销售周转天数</div><div class="kv p">4.1</div><div class="ks">天（加权均值）</div></div>
+<div class="kc"><div class="kl">平均在库天数</div><div class="kv">16.6</div><div class="ks">天</div></div>
 </div>
 
 <div class="st"><span>💰 财务指标</span><span class="ln"></span></div>
 <div class="kg6">
-<div class="kc"><div class="kl">销售收入</div><div class="kv">¥109,362</div><div class="ks">人民币</div></div>
-<div class="kc"><div class="kl">销售成本</div><div class="kv o">¥97,097</div><div class="ks">成本率 88.8%</div></div>
-<div class="kc"><div class="kl">总利润</div><div class="kv g">+¥12,265</div><div class="ks">净利润</div></div>
-<div class="kc"><div class="kl">毛利率</div><div class="kv g">11.2%</div><div class="ks">利润/收入</div></div>
-<div class="kc"><div class="kl">平均单台利润</div><div class="kv p">¥90</div><div class="ks">/ 台</div></div>
-<div class="kc"><div class="kl">整体周转天数</div><div class="kv r">16.38</div><div class="ks">均值</div></div>
+<div class="kc"><div class="kl">销售收入</div><div class="kv">¥144,228</div><div class="ks">人民币</div></div>
+<div class="kc"><div class="kl">销售成本</div><div class="kv o">¥129,724</div><div class="ks">成本率 89.9%</div></div>
+<div class="kc"><div class="kl">总利润</div><div class="kv g">+¥14,504</div><div class="ks">净利润</div></div>
+<div class="kc"><div class="kl">毛利率</div><div class="kv g">10.06%</div><div class="ks">利润/收入</div></div>
+<div class="kc"><div class="kl">平均单台利润</div><div class="kv p">¥91</div><div class="ks">/ 台</div></div>
+<div class="kc"><div class="kl">整体周转天数</div><div class="kv r">20.7</div><div class="ks">均值</div></div>
+</div>
+
+<div class="analysis">
+<div class="st"><span>📋 业务分析</span><span class="ln"></span></div>
+<ul>
+<li>• 累计收机338台，销售160台（消化率47.3%），库存178台</li>
+<li>• 销售收入¥144,228，成本¥129,724，利润¥14,504，毛利率10.06%</li>
+<li>• 库存金额¥71,345，占压资金较大，需关注去化</li>
+<li>• 有销售收入的国家5个：科特CI（¥48,816）、孟加拉BD（¥47,550）、肯尼亚KE（¥24,327）、加纳GH（¥20,778）、巴基斯坦PK（¥2,757）</li>
+<li>• 利润最高：科特CI ¥5,446（毛利率11.16%）、肯尼亚KE ¥3,959（毛利率16.27%）</li>
+<li>• ⚠️ 尚未产生销售：尼日利亚NG、坦桑尼亚TZ、乌干达UG，累计库存27台，库存金额¥21,475，需推动开单</li>
+<li>• ⚠️ 肯尼亚KE库存76台偏高，库存金额¥30,182，平均在库35.0天，销售周转7天，需加快去化</li>
+<li>• ⚠️ 科特CI库存48台偏高，库存金额¥2,385，平均在库13.0天，销售周转10天，需加快去化</li>
+<li>• ⚠️ 尼日利亚NG库存24台，库存金额¥18,711，暂无销售，需优先推动</li>
+<li>• ✅ 巴基斯坦PK已全部售罄，周转5.0天，毛利率20.72%，表现优秀</li>
+<li>• 库存金额集中在肯尼亚KE（¥30,182，42.3%）和尼日利亚NG（¥18,711，26.2%），合计占库存金额68.5%</li>
+</ul>
 </div>
 
 <div class="st"><span>📊 数据可视化</span><span class="ln"></span></div>
 <div class="cg">
 <div class="cc"><div class="ct">📊 各国收机 vs 销售 vs 库存</div><canvas id="ch1"></canvas></div>
 <div class="cc"><div class="ct">💰 各国收入与利润</div><canvas id="ch2"></canvas></div>
-<div class="cc"><div class="ct">🥧 销售收入占比</div><div style="max-width:400px;margin:0 auto"><canvas id="ch3"></canvas></div></div>
+<div class="cc"><div class="ct">💰 库存金额分布(RMB)</div><canvas id="ch5"></canvas></div>
 <div class="cc"><div class="ct">📈 各国毛利率</div><canvas id="ch4"></canvas></div>
 </div>
 
 <div class="tw">
 <div class="th"><h3>📋 各国明细数据</h3><span style="font-size:12px;color:var(--t3)">点击"查看"跳转到各国台账</span></div>
 <div class="ts"><table>
-<thead><tr><th>国家</th><th class="num">累计收机</th><th class="num">旧机销售</th><th class="num">周转天数</th><th class="num">库存数量</th><th class="num">在库天数</th><th class="num">整体周转</th><th class="num">销售收入</th><th class="num">销售成本</th><th class="num">总利润</th><th class="num">毛利率</th><th class="num">单台利润</th><th>明细</th></tr></thead>
+<thead><tr><th>国家</th><th class="num">累计收机</th><th class="num">旧机销售</th><th class="num">周转天数</th><th class="num">库存数量</th><th class="num">库存金额</th><th class="num">在库天数</th><th class="num">整体周转</th><th class="num">销售收入</th><th class="num">销售成本</th><th class="num">总利润</th><th class="num">毛利率</th><th class="num">单台利润</th><th>明细</th></tr></thead>
 <tbody>
-<tr><td><span class="cb" style="background:#4f46e515;color:#4f46e5">孟加拉BD</span></td><td class="num">60</td><td class="num">45</td><td class="num">3天</td><td class="num">15</td><td class="num">10天</td><td class="num">13天</td><td class="num">¥35,357</td><td class="num">¥33,905</td><td class="num pf">+¥1,452</td><td class="num">4.11%</td><td class="num">+¥32</td><td class="link"><a href="https://transsioner.feishu.cn/wiki/CZeDwcSZ7iMd9CkZGKAc57QUnhh?from=from_copylink" target="_blank">查看→</a></td></tr>
-<tr><td><span class="cb" style="background:#05966915;color:#059669">肯尼亚KE</span></td><td class="num">102</td><td class="num">20</td><td class="num">7天</td><td class="num">82</td><td class="num">30天</td><td class="num">37天</td><td class="num">¥18,716</td><td class="num">¥15,003</td><td class="num pf">+¥3,713</td><td class="num">19.84%</td><td class="num">+¥186</td><td class="link"><a href="https://transsioner.feishu.cn/wiki/GuAEwyeLMie17FkynqqcbnnxnHN?from=from_copylink" target="_blank">查看→</a></td></tr>
-<tr><td><span class="cb" style="background:#d9770615;color:#d97706">科特CI</span></td><td class="num">86</td><td class="num">38</td><td class="num">5天</td><td class="num">48</td><td class="num">7天</td><td class="num">12天</td><td class="num">¥32,550</td><td class="num">¥28,434</td><td class="num pf">+¥4,116</td><td class="num">12.65%</td><td class="num">+¥108</td><td class="link"><a href="https://transsioner.feishu.cn/wiki/PXjfwRAv0ic6agkxCaZcJ1cun1y?from=from_copylink" target="_blank">查看→</a></td></tr>
-<tr><td><span class="cb" style="background:#dc262615;color:#dc2626">加纳GH</span></td><td class="num">41</td><td class="num">30</td><td class="num">4天</td><td class="num">11</td><td class="num">20天</td><td class="num">24天</td><td class="num">¥20,778</td><td class="num">¥18,193</td><td class="num pf">+¥2,585</td><td class="num">12.44%</td><td class="num">+¥86</td><td class="link"><a href="https://transsioner.feishu.cn/wiki/MJQ1wkdy1iYLkIkJDjScNsF8nAc?from=from_copylink" target="_blank">查看→</a></td></tr>
-<tr><td><span class="cb" style="background:#7c3aed15;color:#7c3aed">巴基斯坦PK</span></td><td class="num">4</td><td class="num">3</td><td class="num">3天</td><td class="num">1</td><td class="num">4天</td><td class="num">7天</td><td class="num">¥1,961</td><td class="num">¥1,562</td><td class="num pf">+¥399</td><td class="num">20.35%</td><td class="num">+¥133</td><td class="link"><a href="https://transsioner.feishu.cn/wiki/WrZ1wmLMPiEy1rk9lescVRh3n9c?from=from_copylink" target="_blank">查看→</a></td></tr>
-<tr><td><span class="cb" style="background:#0891b215;color:#0891b2">尼日利亚NG</span></td><td class="num">24</td><td class="num">0</td><td class="num">0天</td><td class="num">24</td><td class="num">20天</td><td class="num">20天</td><td class="num">¥0</td><td class="num">¥0</td><td class="num pf">+¥0</td><td class="num">0.00%</td><td class="num">+¥0</td><td class="link"><a href="https://transsioner.feishu.cn/wiki/W526w6ThpiLEbyk9dJQcSbpenmd?from=from_copylink" target="_blank">查看→</a></td></tr>
-<tr><td><span class="cb" style="background:#be185d15;color:#be185d">坦桑尼亚TZ</span></td><td class="num">2</td><td class="num">0</td><td class="num">0天</td><td class="num">2</td><td class="num">7天</td><td class="num">7天</td><td class="num">¥0</td><td class="num">¥0</td><td class="num pf">+¥0</td><td class="num">0.00%</td><td class="num">+¥0</td><td class="link"><a href="https://transsioner.feishu.cn/wiki/JxuEwK71Ria9T2kkVm8cLPW8nef?from=from_copylink" target="_blank">查看→</a></td></tr>
-<tr><td><span class="cb" style="background:#65a30d15;color:#65a30d">乌干达UG</span></td><td class="num">1</td><td class="num">0</td><td class="num">0天</td><td class="num">1</td><td class="num">11天</td><td class="num">11天</td><td class="num">¥0</td><td class="num">¥0</td><td class="num pf">+¥0</td><td class="num">0.00%</td><td class="num">+¥0</td><td class="link"><a href="https://transsioner.feishu.cn/wiki/BD4swTyLPiFMSOkrqOccNz0jnQV?from=from_copylink" target="_blank">查看→</a></td></tr>
+<tr><td><span class="cb" style="background:#4f46e515;color:#4f46e5">孟加拉BD</span></td><td class="num">75</td><td class="num">59</td><td class="num">7天</td><td class="num">16</td><td class="num">¥9,802</td><td class="num">9.0天</td><td class="num">16.0天</td><td class="num">¥47,550</td><td class="num">¥45,607</td><td class="num pf">+¥1,943</td><td class="num">4.09%</td><td class="num">+¥33</td><td class="link"><a href="https://transsioner.feishu.cn/wiki/CZeDwcSZ7iMd9CkZGKAc57QUnhh" target="_blank">查看→</a></td></tr>
+<tr><td><span class="cb" style="background:#05966915;color:#059669">肯尼亚KE</span></td><td class="num">105</td><td class="num">29</td><td class="num">7天</td><td class="num">76</td><td class="num">¥30,182</td><td class="num">35.0天</td><td class="num">42.0天</td><td class="num">¥24,327</td><td class="num">¥20,368</td><td class="num pf">+¥3,959</td><td class="num">16.27%</td><td class="num">+¥137</td><td class="link"><a href="https://transsioner.feishu.cn/wiki/GuAEwyeLMie17FkynqqcbnnxnHN" target="_blank">查看→</a></td></tr>
+<tr><td><span class="cb" style="background:#d9770615;color:#d97706">科特CI</span></td><td class="num">86</td><td class="num">38</td><td class="num">10天</td><td class="num">48</td><td class="num">¥2,385</td><td class="num">13.0天</td><td class="num">23.0天</td><td class="num">¥48,816</td><td class="num">¥43,370</td><td class="num pf">+¥5,446</td><td class="num">11.16%</td><td class="num">+¥143</td><td class="link"><a href="https://transsioner.feishu.cn/wiki/PXjfwRAv0ic6agkxCaZcJ1cun1y" target="_blank">查看→</a></td></tr>
+<tr><td><span class="cb" style="background:#dc262615;color:#dc2626">加纳GH</span></td><td class="num">41</td><td class="num">30</td><td class="num">4天</td><td class="num">11</td><td class="num">¥7,500</td><td class="num">20.0天</td><td class="num">24.0天</td><td class="num">¥20,778</td><td class="num">¥18,193</td><td class="num pf">+¥2,585</td><td class="num">12.44%</td><td class="num">+¥86</td><td class="link"><a href="https://transsioner.feishu.cn/wiki/MJQ1wkdy1iYLkIkJDjScNsF8nAc" target="_blank">查看→</a></td></tr>
+<tr><td><span class="cb" style="background:#7c3aed15;color:#7c3aed">巴基斯坦PK</span></td><td class="num">4</td><td class="num">4</td><td class="num">5天</td><td class="num">0</td><td class="num">¥0</td><td class="num">-</td><td class="num">5.0天</td><td class="num">¥2,757</td><td class="num">¥2,186</td><td class="num pf">+¥571</td><td class="num">20.72%</td><td class="num">+¥143</td><td class="link"><a href="https://transsioner.feishu.cn/wiki/WrZ1wmLMPiEy1rk9lescVRh3n9c" target="_blank">查看→</a></td></tr>
+<tr><td><span class="cb" style="background:#0891b215;color:#0891b2">尼日利亚NG</span></td><td class="num">24</td><td class="num">0</td><td class="num">-</td><td class="num">24</td><td class="num">¥18,711</td><td class="num">20.0天</td><td class="num">20.0天</td><td class="num">¥0</td><td class="num">¥0</td><td class="num pf">+¥0</td><td class="num">0.00%</td><td class="num">+¥0</td><td class="link"><a href="https://transsioner.feishu.cn/wiki/W526w6ThpiLEbyk9dJQcSbpenmd" target="_blank">查看→</a></td></tr>
+<tr><td><span class="cb" style="background:#be185d15;color:#be185d">坦桑尼亚TZ</span></td><td class="num">2</td><td class="num">0</td><td class="num">-</td><td class="num">2</td><td class="num">¥2,215</td><td class="num">23.5天</td><td class="num">23.5天</td><td class="num">¥0</td><td class="num">¥0</td><td class="num pf">+¥0</td><td class="num">0.00%</td><td class="num">+¥0</td><td class="link"><a href="https://transsioner.feishu.cn/wiki/JxuEwK71Ria9T2kkVm8cLPW8nef" target="_blank">查看→</a></td></tr>
+<tr><td><span class="cb" style="background:#65a30d15;color:#65a30d">乌干达UG</span></td><td class="num">1</td><td class="num">0</td><td class="num">-</td><td class="num">1</td><td class="num">¥549</td><td class="num">12.0天</td><td class="num">12.0天</td><td class="num">¥0</td><td class="num">¥0</td><td class="num pf">+¥0</td><td class="num">0.00%</td><td class="num">+¥0</td><td class="link"><a href="https://transsioner.feishu.cn/wiki/BD4swTyLPiFMSOkrqOccNz0jnQV" target="_blank">查看→</a></td></tr>
 <tr class="tot"><td>📌 总计</td>
-<td class="num">320</td>
-<td class="num">136</td>
-<td class="num">2.75天</td>
-<td class="num">184</td>
-<td class="num">14.0天</td>
-<td class="num">16.38天</td>
-<td class="num">¥109,362</td>
-<td class="num">¥97,097</td>
-<td class="num pf">+¥12,265</td>
-<td class="num">11.2%</td>
-<td class="num">¥90</td>
+<td class="num">338</td>
+<td class="num">160</td>
+<td class="num">4.1天</td>
+<td class="num">178</td>
+<td class="num">¥71,345</td>
+<td class="num">16.6天</td>
+<td class="num">20.7天</td>
+<td class="num">¥144,228</td>
+<td class="num">¥129,724</td>
+<td class="num pf">+¥14,504</td>
+<td class="num">10.06%</td>
+<td class="num">¥91</td>
 <td></td></tr>
 </tbody></table></div></div>
-<footer>数据来源：飞书知识库 · 自动定时刷新 · 最后更新：2026-05-19</footer>
+<footer>数据来源：飞书知识库 · 自动定时刷新 · 最后更新：2026-05-20</footer>
 </div>
 <script>
-new Chart(document.getElementById('ch1'),{type:'bar',data:{labels:["\u5b5f\u52a0\u62c9BD", "\u80af\u5c3c\u4e9aKE", "\u79d1\u7279CI", "\u52a0\u7eb3GH", "\u5df4\u57fa\u65af\u5766PK", "\u5c3c\u65e5\u5229\u4e9aNG", "\u5766\u6851\u5c3c\u4e9aTZ", "\u4e4c\u5e72\u8fbeUG"],datasets:[{label:'累计收机',data:[60, 102, 86, 41, 4, 24, 2, 1],backgroundColor:'#4f46e5',borderRadius:6},{label:'旧机销售',data:[45, 20, 38, 30, 3, 0, 0, 0],backgroundColor:'#059669',borderRadius:6},{label:'当前库存',data:[15, 82, 48, 11, 1, 24, 2, 1],backgroundColor:'#d97706',borderRadius:6}]},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{usePointStyle:true,padding:20,font:{size:12}}}},scales:{y:{beginAtZero:true,grid:{color:'#f3f4f6'}},x:{grid:{display:false}}}}});
-new Chart(document.getElementById('ch2'),{type:'bar',data:{labels:["\u5b5f\u52a0\u62c9BD", "\u80af\u5c3c\u4e9aKE", "\u79d1\u7279CI", "\u52a0\u7eb3GH", "\u5df4\u57fa\u65af\u5766PK", "\u5c3c\u65e5\u5229\u4e9aNG", "\u5766\u6851\u5c3c\u4e9aTZ", "\u4e4c\u5e72\u8fbeUG"],datasets:[{label:'销售收入',data:[35357.0, 18716.0, 32550.0, 20778.0, 1961.0, 0.0, 0.0, 0.0],backgroundColor:'#4f46e5',borderRadius:6},{label:'总利润',data:[1452.0, 3713.0, 4116.0, 2585.0, 399.0, 0.0, 0.0, 0.0],backgroundColor:'#059669',borderRadius:6}]},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{usePointStyle:true,padding:20,font:{size:12}}}},scales:{y:{beginAtZero:true,grid:{color:'#f3f4f6'},ticks:{callback:v=>'¥'+v.toLocaleString()}},x:{grid:{display:false}}}}});
-new Chart(document.getElementById('ch3'),{type:'doughnut',data:{labels:["\u5b5f\u52a0\u62c9BD", "\u80af\u5c3c\u4e9aKE", "\u79d1\u7279CI", "\u52a0\u7eb3GH", "\u5df4\u57fa\u65af\u5766PK", "\u5c3c\u65e5\u5229\u4e9aNG", "\u5766\u6851\u5c3c\u4e9aTZ", "\u4e4c\u5e72\u8fbeUG"],datasets:[{data:[35357.0, 18716.0, 32550.0, 20778.0, 1961.0, 0.0, 0.0, 0.0],backgroundColor:["#4f46e5", "#059669", "#d97706", "#dc2626", "#7c3aed", "#0891b2", "#be185d", "#65a30d"],borderWidth:2,borderColor:'#fff'}]},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{usePointStyle:true,padding:14,font:{size:11}}}}}});
-new Chart(document.getElementById('ch4'),{type:'bar',data:{labels:["\u5b5f\u52a0\u62c9BD", "\u80af\u5c3c\u4e9aKE", "\u79d1\u7279CI", "\u52a0\u7eb3GH", "\u5df4\u57fa\u65af\u5766PK", "\u5c3c\u65e5\u5229\u4e9aNG", "\u5766\u6851\u5c3c\u4e9aTZ", "\u4e4c\u5e72\u8fbeUG"],datasets:[{label:'毛利率%',data:[4.11, 19.84, 12.65, 12.44, 20.35, 0.0, 0.0, 0.0],backgroundColor:'#7c3aed',borderRadius:6}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,grid:{color:'#f3f4f6'},ticks:{callback:v=>v+'%'}},x:{grid:{display:false}}}}});
+new Chart(document.getElementById('ch1'),{type:'bar',data:{labels:["孟加拉BD", "肯尼亚KE", "科特CI", "加纳GH", "巴基斯坦PK", "尼日利亚NG", "坦桑尼亚TZ", "乌干达UG"],datasets:[{label:'累计收机',data:[75, 105, 86, 41, 4, 24, 2, 1],backgroundColor:'#4f46e5',borderRadius:6},{label:'旧机销售',data:[59, 29, 38, 30, 4, 0, 0, 0],backgroundColor:'#059669',borderRadius:6},{label:'当前库存',data:[16, 76, 48, 11, 0, 24, 2, 1],backgroundColor:'#d97706',borderRadius:6}]},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{usePointStyle:true,padding:20,font:{size:12}}}},scales:{y:{beginAtZero:true,grid:{color:'#f3f4f6'}},x:{grid:{display:false}}}}});
+new Chart(document.getElementById('ch2'),{type:'bar',data:{labels:["孟加拉BD", "肯尼亚KE", "科特CI", "加纳GH", "巴基斯坦PK", "尼日利亚NG", "坦桑尼亚TZ", "乌干达UG"],datasets:[{label:'销售收入',data:[47550, 24327, 48816, 20778, 2757, 0, 0, 0],backgroundColor:'#4f46e5',borderRadius:6},{label:'总利润',data:[1943, 3959, 5446, 2585, 571, 0, 0, 0],backgroundColor:'#059669',borderRadius:6}]},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{usePointStyle:true,padding:20,font:{size:12}}}},scales:{y:{beginAtZero:true,grid:{color:'#f3f4f6'},ticks:{callback:v=>'¥'+v.toLocaleString()}},x:{grid:{display:false}}}}});
+new Chart(document.getElementById('ch5'),{type:'doughnut',data:{labels:["孟加拉BD", "肯尼亚KE", "科特CI", "加纳GH", "巴基斯坦PK", "尼日利亚NG", "坦桑尼亚TZ", "乌干达UG"],datasets:[{data:[9802, 30182, 2385, 7500, 0, 18711, 2215, 549],backgroundColor:["#4f46e5", "#059669", "#d97706", "#dc2626", "#7c3aed", "#0891b2", "#be185d", "#65a30d"],borderWidth:2,borderColor:'#fff'}]},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{usePointStyle:true,padding:14,font:{size:11}}}}}});
+new Chart(document.getElementById('ch4'),{type:'bar',data:{labels:["孟加拉BD", "肯尼亚KE", "科特CI", "加纳GH", "巴基斯坦PK", "尼日利亚NG", "坦桑尼亚TZ", "乌干达UG"],datasets:[{label:'毛利率%',data:[4.09, 16.27, 11.16, 12.44, 20.72, 0.0, 0.0, 0.0],backgroundColor:'#7c3aed',borderRadius:6}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,grid:{color:'#f3f4f6'},ticks:{callback:v=>v+'%'}},x:{grid:{display:false}}}}});
 </script>
 </body></html>
