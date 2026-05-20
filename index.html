@@ -52,7 +52,8 @@ td.link a:hover{background:var(--al)}
 .cb{display:inline-block;padding:3px 10px;border-radius:6px;font-weight:600;font-size:13px}
 .analysis{background:var(--card);border-radius:var(--rd);padding:24px;box-shadow:var(--sh);border:1px solid var(--bd);margin-bottom:24px}
 .analysis h3{font-size:15px;font-weight:700;margin-bottom:16px}
-.analysis .ag{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.analysis .ag{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:1200px){.analysis .ag{grid-template-columns:1fr 1fr}}
 .analysis .ac{background:#f9fafb;border-radius:12px;padding:16px;border-left:4px solid var(--bd)}
 .analysis .ac.warn{border-left-color:var(--r);background:#fef2f2}
 .analysis .ac.good{border-left-color:var(--g);background:var(--gl)}
