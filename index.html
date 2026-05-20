@@ -52,9 +52,18 @@ td.link a:hover{background:var(--al)}
 .cb{display:inline-block;padding:3px 10px;border-radius:6px;font-weight:600;font-size:13px}
 .analysis{background:var(--card);border-radius:var(--rd);padding:24px;box-shadow:var(--sh);border:1px solid var(--bd);margin-bottom:24px}
 .analysis h3{font-size:15px;font-weight:700;margin-bottom:16px}
-.analysis ul{list-style:none;padding:0}
-.analysis li{padding:8px 0;border-bottom:1px solid #f3f4f6;font-size:14px;line-height:1.6}
-.analysis li:last-child{border-bottom:none}
+.analysis .ag{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.analysis .ac{background:#f9fafb;border-radius:12px;padding:16px;border-left:4px solid var(--bd)}
+.analysis .ac.warn{border-left-color:var(--r);background:#fef2f2}
+.analysis .ac.good{border-left-color:var(--g);background:var(--gl)}
+.analysis .ac.info{border-left-color:var(--a);background:var(--al)}
+.analysis .act{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;color:var(--t2)}
+.analysis .ac p{font-size:14px;line-height:1.7;margin:0}
+.analysis .ac .hl{font-weight:700;color:var(--a)}
+.analysis .ac.warn .hl{color:var(--r)}
+.analysis .ac.good .hl{color:var(--g)}
+@media(max-width:768px){.analysis .ag{grid-template-columns:1fr}}
+.ch-sm{max-width:380px;margin:0 auto}
 footer{text-align:center;margin-top:32px;font-size:12px;color:var(--t3)}
 @media(max-width:1200px){.kg,.kg6{grid-template-columns:repeat(4,1fr)}.cg{grid-template-columns:1fr}}
 @media(max-width:768px){.c{padding:16px 12px}.kg,.kg6{grid-template-columns:repeat(2,1fr)}.h{padding:24px}.h h1{font-size:22px}.hs{gap:20px}.kc .kv{font-size:20px}}
@@ -96,26 +105,19 @@ footer{text-align:center;margin-top:32px;font-size:12px;color:var(--t3)}
 
 <div class="analysis">
 <div class="st"><span>📋 业务分析</span><span class="ln"></span></div>
-<ul>
-<li>• 累计收机338台，销售160台（消化率47.3%），库存178台</li>
-<li>• 销售收入¥144,228，成本¥129,724，利润¥14,504，毛利率10.06%</li>
-<li>• 库存金额¥71,345，占压资金较大，需关注去化</li>
-<li>• 有销售收入的国家5个：科特CI（¥48,816）、孟加拉BD（¥47,550）、肯尼亚KE（¥24,327）、加纳GH（¥20,778）、巴基斯坦PK（¥2,757）</li>
-<li>• 利润最高：科特CI ¥5,446（毛利率11.16%）、肯尼亚KE ¥3,959（毛利率16.27%）</li>
-<li>• ⚠️ 尚未产生销售：尼日利亚NG、坦桑尼亚TZ、乌干达UG，累计库存27台，库存金额¥21,475，需推动开单</li>
-<li>• ⚠️ 肯尼亚KE库存76台偏高，库存金额¥30,182，平均在库35.0天，销售周转7天，需加快去化</li>
-<li>• ⚠️ 科特CI库存48台偏高，库存金额¥2,385，平均在库13.0天，销售周转10天，需加快去化</li>
-<li>• ⚠️ 尼日利亚NG库存24台，库存金额¥18,711，暂无销售，需优先推动</li>
-<li>• ✅ 巴基斯坦PK已全部售罄，周转5.0天，毛利率20.72%，表现优秀</li>
-<li>• 库存金额集中在肯尼亚KE（¥30,182，42.3%）和尼日利亚NG（¥18,711，26.2%），合计占库存金额68.5%</li>
-</ul>
+<div class="ag">
+<div class="ac info"><div class="act">📊 总体概览</div><p>累计收机<span class="hl">338台</span>，销售<span class="hl">160台</span>（消化率47.3%），库存178台。销售收入<span class="hl">¥144,228</span>，利润<span class="hl">¥14,504</span>，毛利率10.06%。库存金额<span class="hl">¥71,345</span>，占压资金较大。</p></div>
+<div class="ac good"><div class="act">🏆 表现优秀</div><p>科特CI利润最高<span class="hl">¥5,446</span>（毛利率11.2%）；巴基斯坦PK全部售罄，周转仅<span class="hl">5天</span>，毛利率<span class="hl">20.7%</span>。加纳GH消化率<span class="hl">73.2%</span>，表现稳健。</p></div>
+<div class="ac warn"><div class="act">⚠️ 需要关注</div><p>尼日利亚NG、坦桑尼亚TZ、乌干达UG <span class="hl">尚未产生销售</span>，累计库存27台，占压资金¥21,475。肯尼亚KE库存<span class="hl">76台</span>在库35天，去化压力大。库存金额集中在KE（<span class="hl">42.3%</span>）和NG（<span class="hl">26.2%</span>）。</p></div>
+<div class="ac info"><div class="act">💡 建议</div><p>优先推动NG/TZ/UG开单；KE加速去化降低库存天数；孟加拉BD销量最大但毛利率仅<span class="hl">4.1%</span>，需关注定价策略。</p></div>
+</div>
 </div>
 
 <div class="st"><span>📊 数据可视化</span><span class="ln"></span></div>
 <div class="cg">
 <div class="cc"><div class="ct">📊 各国收机 vs 销售 vs 库存</div><canvas id="ch1"></canvas></div>
 <div class="cc"><div class="ct">💰 各国收入与利润</div><canvas id="ch2"></canvas></div>
-<div class="cc"><div class="ct">💰 库存金额分布(RMB)</div><canvas id="ch5"></canvas></div>
+<div class="cc"><div class="ct">💰 库存金额分布(RMB)</div><div class="ch-sm"><canvas id="ch5"></canvas></div></div>
 <div class="cc"><div class="ct">📈 各国毛利率</div><canvas id="ch4"></canvas></div>
 </div>
 
