@@ -22,11 +22,9 @@ body{font-family:'Inter','Noto Sans SC',system-ui,sans-serif;background:var(--bg
 .hs{display:flex;gap:40px;margin-top:20px;position:relative;z-index:1;flex-wrap:wrap}
 .hs .v{font-size:24px;font-weight:800}
 .hs .l{font-size:12px;opacity:.65}
-/* Theme toggle */
-.thm{position:absolute;top:16px;right:20px;z-index:10;display:flex;align-items:center;gap:8px}
-.thm-btn{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:#fff;padding:8px 14px;border-radius:20px;cursor:pointer;font-size:13px;font-weight:600;transition:all .2s;display:flex;align-items:center;gap:6px;backdrop-filter:blur(4px)}
+.thm{position:absolute;top:16px;right:20px;z-index:10}
+.thm-btn{background:rgba(255,255,255,.15);border:1px solid rgba(255,255,255,.25);color:#fff;padding:8px 14px;border-radius:20px;cursor:pointer;font-size:13px;font-weight:600;transition:all .2s;display:flex;align-items:center;gap:6px}
 .thm-btn:hover{background:rgba(255,255,255,.25)}
-.thm-btn .icon{font-size:16px}
 .st{display:flex;align-items:center;gap:10px;font-size:15px;font-weight:700;color:var(--text);margin-bottom:16px;text-transform:uppercase;letter-spacing:.5px}
 .st .ln{flex:1;height:1px;background:var(--bd)}
 .kg{display:grid;grid-template-columns:repeat(5,1fr);gap:12px;margin-bottom:24px}
@@ -34,7 +32,7 @@ body{font-family:'Inter','Noto Sans SC',system-ui,sans-serif;background:var(--bg
 .kc{background:var(--card);border-radius:var(--rd);padding:16px 18px;box-shadow:var(--sh);border:1px solid var(--bd);transition:transform .15s,box-shadow .15s,background .3s,border-color .3s}
 .kc:hover{transform:translateY(-2px);box-shadow:var(--shl)}
 .kc .kl{font-size:11px;font-weight:600;text-transform:uppercase;letter-spacing:.5px;color:var(--t3);margin-bottom:4px}
-.kc .kv{font-size:24px;font-weight:800;letter-spacing:-.5px}
+.kc .kv{font-size:24px;font-weight:800;letter-spacing:-.5px;color:var(--text)}
 .kc .ks{font-size:11px;color:var(--t2);margin-top:2px}
 .kv.g{color:var(--g)}.kv.o{color:var(--o)}.kv.p{color:var(--p)}.kv.r{color:var(--r)}
 .cg{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:24px}
@@ -69,10 +67,7 @@ td.link a:hover{background:var(--al)}
 [data-theme="dark"] .analysis .ac.warn{background:#1a1015}
 .analysis .ac.good{border-left-color:var(--g)}
 [data-theme="light"] .analysis .ac.good{background:var(--gl)}
-[data-theme="dark"] .analysis .ac.good{background:var(--gl)}
-.analysis .ac.info{border-left-color:var(--a)}
-[data-theme="light"] .analysis .ac.info{background:var(--al)}
-[data-theme="dark"] .analysis .ac.info{background:var(--al)}
+.analysis .ac.info{border-left-color:var(--a);background:var(--al)}
 .analysis .act{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:.5px;margin-bottom:10px;color:var(--t2)}
 .analysis .ac p{font-size:14px;line-height:1.7;margin:0;color:var(--text)}
 .analysis .ac .hl{font-weight:700;color:var(--a)}
@@ -88,7 +83,7 @@ footer{text-align:center;margin-top:32px;font-size:12px;color:var(--t3)}
 <body>
 <div class="c">
 <div class="h">
-<div class="thm"><button class="thm-btn" onclick="toggleTheme()" id="themeBtn"><span class="icon">🌙</span> 深色模式</button></div>
+<div class="thm"><button class="thm-btn" onclick="toggleTheme()" id="themeBtn">🌙 深色模式</button></div>
 <div class="hc">
 <div class="hb">🔄 实时同步 · 飞书数据</div>
 <h1>二手机业务周报 W21</h1>
@@ -125,14 +120,14 @@ footer{text-align:center;margin-top:32px;font-size:12px;color:var(--t3)}
 <div class="st"><span>📋 业务分析</span><span class="ln"></span></div>
 <div class="ag">
 <div class="ac info"><div class="act">📊 总体概览</div><p>累计收机<span class="hl">462台</span>，销售<span class="hl">202台</span>（消化率43.7%），库存260台。销售收入<span class="hl">¥175,898</span>，利润<span class="hl">+¥17,013</span>，毛利率9.67%。库存金额<span class="hl">¥59,850</span>，整体周转23.8天。7国产生销售，TZ为零。</p></div>
-<div class="ac good"><div class="act">🏆 核心主力</div><p>科特CI贡献收入<span class="hl">¥48,816</span>（占27.8%），利润<span class="hl">+¥5,446</span>，单台利润+¥143.31。孟加拉BD销量最大<span class="hl">66台</span>（占32.7%），但毛利率仅4.25%。加纳GH消化率<span class="hl">73.2%</span>最高，周转仅4天。肯尼亚KE利润率<span class="hl">19.17%</span>优秀。</p></div>
+<div class="ac good"><div class="act">🏆 核心主力</div><p>科特CI贡献收入<span class="hl">¥48,816</span>（占27.8%），利润<span class="hl">+¥5,446</span>。孟加拉BD销量最大<span class="hl">66台</span>（占32.7%），但毛利率仅4.25%。加纳GH消化率<span class="hl">73.2%</span>最高，周转仅4天。肯尼亚KE利润率<span class="hl">19.17%</span>优秀。</p></div>
 <div class="ac good"><div class="act">💰 利润率分层</div><p>高利润（>15%）：<span class="hl">UG 32.22%</span>、PK 20.72%、KE 19.17%——盈利能力强。中利润（10-15%）：<span class="hl">GH 12.44%</span>、CI 11.16%——量利均衡。低利润（<10%）：<span class="hl">BD 4.25%</span>——最大体量却最低利润。亏损：<span class="hl">NG -7.62%</span>——成本倒挂急需扭转。</p></div>
-<div class="ac warn"><div class="act">⚠️ 需要关注</div><p>坦桑尼亚TZ <span class="hl">尚未产生销售</span>，库存102台占压¥2,215，在库28.5天。肯尼亚KE库存<span class="hl">66台</span>在库37天最长，消化率仅38.9%。库存金额集中在KE（<span class="hl">50.4%</span>）和BD（<span class="hl">17.8%</span>），占压资金¥40,809。</p></div>
-<div class="ac warn"><div class="act">📦 库存健康度</div><p>健康库存（<15天）：BD 10.2天、CI 13.0天、NG 7.0天——共<span class="hl">81台</span>。预警库存（15-30天）：GH 20.0天、TZ 28.5天——共<span class="hl">113台</span>。高危库存（>30天）：<span class="hl">KE 37.0天</span>，66台占库存总量25.4%，资金占压¥30,182。</p></div>
+<div class="ac warn"><div class="act">⚠️ 需要关注</div><p>坦桑尼亚TZ <span class="hl">尚未产生销售</span>，库存102台占压¥2,215，在库28.5天。肯尼亚KE库存<span class="hl">66台</span>在库37天最长，消化率仅38.9%。库存金额集中在KE（<span class="hl">50.4%</span>）和BD（<span class="hl">17.8%</span>）。</p></div>
+<div class="ac warn"><div class="act">📦 库存健康度</div><p>健康库存（<15天）：BD 10.2天、CI 13.0天、NG 7.0天——共<span class="hl">81台</span>。预警库存（15-30天）：GH 20.0天、TZ 28.5天——共<span class="hl">113台</span>。高危库存（>30天）：<span class="hl">KE 37.0天</span>，66台占库存总量25.4%。</p></div>
 <div class="ac warn"><div class="act">📉 尼日利亚NG亏损</div><p>NG销售<span class="hl">21台</span>，毛利率<span class="hl">-7.62%</span>（亏损-¥1,109），成本¥15,659超过收入¥14,550。周转<span class="hl">26天</span>偏长，单台亏损-¥52.81。根源：采购成本高或售价低，需逐台分析设止损线。</p></div>
-<div class="ac good"><div class="act">🆕 突破进展</div><p>乌干达UG实现<span class="hl">首台成交</span>，收入¥810，利润¥261，毛利率32.22%，单台¥260.94开局亮眼。肯尼亚KE本周销售<span class="hl">42台</span>大幅增长，利润率19.17%。PK全量消化（<span class="hl">4台售罄</span>）但体量过小（仅4台收机）。</p></div>
-<div class="ac info"><div class="act">⏱️ 周转效率</div><p>快周转（<5天）：<span class="hl">GH 4天</span>——高效标杆。中速（5-10天）：<span class="hl">PK 5天</span>、BD 7.8天、KE 9.9天、CI 10.0天。慢速（>20天）：<span class="hl">NG 26天</span>——产品滞销或定价问题。GH应输出经验给慢速国家。</p></div>
-<div class="ac info"><div class="act">💡 行动建议</div><p>① <span class="hl">TZ紧急破零</span>：102台在库28.5天，尽快启动销售或调货至临近市场；② <span class="hl">NG成本审查</span>：逐台分析采购价和售价差距，设止损线；③ <span class="hl">KE加速去化</span>：66台库存37天，制定促销方案；④ <span class="hl">BD提升毛利</span>：66台销量仅4.25%毛利，调整定价目标8%+；⑤ <span class="hl">UG扩大规模</span>：盈利能力强但仅1台收机，加速铺开。</p></div>
+<div class="ac good"><div class="act">🆕 突破进展</div><p>乌干达UG实现<span class="hl">首台成交</span>，收入¥810，利润¥261，毛利率32.22%，单台¥260.94开局亮眼。肯尼亚KE本周销售<span class="hl">42台</span>大幅增长，利润率19.17%。PK全量消化（<span class="hl">4台售罄</span>）但体量过小。</p></div>
+<div class="ac info"><div class="act">⏱️ 周转效率</div><p>快周转（<5天）：<span class="hl">GH 4天</span>——高效标杆。中速（5-10天）：<span class="hl">PK 5天</span>、BD 7.8天、KE 9.9天、CI 10.0天。慢速（>20天）：<span class="hl">NG 26天</span>——产品滞销或定价问题。</p></div>
+<div class="ac info"><div class="act">💡 行动建议</div><p>① <span class="hl">TZ紧急破零</span>：102台在库28.5天，尽快启动销售或调货；② <span class="hl">NG成本审查</span>：逐台分析采购价和售价差距，设止损线；③ <span class="hl">KE加速去化</span>：66台库存37天，制定促销方案；④ <span class="hl">BD提升毛利</span>：66台销量仅4.25%毛利，调整定价目标8%+；⑤ <span class="hl">UG扩大规模</span>：盈利能力强但仅1台收机。</p></div>
 </div>
 </div>
 
@@ -162,27 +157,33 @@ footer{text-align:center;margin-top:32px;font-size:12px;color:var(--t3)}
 <footer>数据来源：飞书知识库 · 自动定时刷新 · 最后更新：2026-05-27</footer>
 </div>
 <script>
-// Theme toggle
+var charts={};
+function cc(){
+var t=document.documentElement.getAttribute('data-theme');
+var d=t==='dark';
+var tx=d?'#8b949e':'#6b7280',gr=d?'#30363d':'#e5e7eb',ca=d?'#161b22':'#ffffff';
+var l=["孟加拉BD", "肯尼亚KE", "科特CI", "加纳GH", "巴基斯坦PK", "尼日利亚NG", "坦桑尼亚TZ", "乌干达UG"];
+charts.ch1=new Chart(document.getElementById('ch1'),{type:'bar',data:{labels:l,datasets:[{label:'累计收机',data:[81, 108, 86, 41, 4, 39, 102, 1],backgroundColor:'#4f46e5',borderRadius:6},{label:'旧机销售',data:[66, 42, 38, 30, 4, 21, 0, 1],backgroundColor:'#059669',borderRadius:6},{label:'当前库存',data:[15, 66, 48, 11, 0, 18, 102, 0],backgroundColor:'#d97706',borderRadius:6}]},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{usePointStyle:true,padding:20,font:{size:12},color:tx}}},scales:{y:{beginAtZero:true,grid:{color:gr},ticks:{color:tx}},x:{grid:{display:false},ticks:{color:tx}}}}});
+charts.ch2=new Chart(document.getElementById('ch2'),{type:'bar',data:{labels:l,datasets:[{label:'销售收入',data:[51245, 36942, 48816, 20778, 2757, 14550, 0, 810],backgroundColor:'#4f46e5',borderRadius:6},{label:'总利润',data:[2176, 7083, 5446, 2585, 571, -1109, 0, 261],backgroundColor:'#059669',borderRadius:6}]},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{usePointStyle:true,padding:20,font:{size:12},color:tx}}},scales:{y:{beginAtZero:true,grid:{color:gr},ticks:{callback:function(v){return'¥'+v.toLocaleString()},color:tx}},x:{grid:{display:false},ticks:{color:tx}}}}});
+charts.ch5=new Chart(document.getElementById('ch5'),{type:'doughnut',data:{labels:l,datasets:[{data:[10627, 30182, 2385, 7500, 0, 6941, 2215, 0],backgroundColor:["#4f46e5", "#059669", "#d97706", "#dc2626", "#7c3aed", "#0891b2", "#be185d", "#65a30d"],borderWidth:2,borderColor:ca}]},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{usePointStyle:true,padding:14,font:{size:11},color:tx}}}}});
+charts.ch4=new Chart(document.getElementById('ch4'),{type:'bar',data:{labels:l,datasets:[{label:'毛利率%',data:[4.25, 19.17, 11.16, 12.44, 20.72, -7.62, 0.0, 32.22],backgroundColor:'#7c3aed',borderRadius:6}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,grid:{color:gr},ticks:{callback:function(v){return v+'%'},color:tx}},x:{grid:{display:false},ticks:{color:tx}}}}});
+}
+function dc(){Object.values(charts).forEach(function(c){c.destroy()});charts={};}
 (function(){
 var t=localStorage.getItem('theme')||'light';
 document.documentElement.setAttribute('data-theme',t);
-updateBtn(t);
+var b=document.getElementById('themeBtn');
+b.innerHTML=t==='dark'?'☀️ 浅色模式':'🌙 深色模式';
+cc();
 })();
 function toggleTheme(){
 var c=document.documentElement.getAttribute('data-theme');
 var n=c==='dark'?'light':'dark';
 document.documentElement.setAttribute('data-theme',n);
 localStorage.setItem('theme',n);
-updateBtn(n);
-}
-function updateBtn(t){
 var b=document.getElementById('themeBtn');
-if(t==='dark'){b.innerHTML='<span class="icon">☀️</span> 浅色模式';}else{b.innerHTML='<span class="icon">🌙</span> 深色模式';}
+b.innerHTML=n==='dark'?'☀️ 浅色模式':'🌙 深色模式';
+dc();cc();
 }
-// Charts
-new Chart(document.getElementById('ch1'),{type:'bar',data:{labels:["孟加拉BD", "肯尼亚KE", "科特CI", "加纳GH", "巴基斯坦PK", "尼日利亚NG", "坦桑尼亚TZ", "乌干达UG"],datasets:[{label:'累计收机',data:[81, 108, 86, 41, 4, 39, 102, 1],backgroundColor:'#4f46e5',borderRadius:6},{label:'旧机销售',data:[66, 42, 38, 30, 4, 21, 0, 1],backgroundColor:'#059669',borderRadius:6},{label:'当前库存',data:[15, 66, 48, 11, 0, 18, 102, 0],backgroundColor:'#d97706',borderRadius:6}]},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{usePointStyle:true,padding:20,font:{size:12},color:'var(--text)'}}},scales:{y:{beginAtZero:true,grid:{color:'var(--bd)'},ticks:{color:'var(--t2)'}},x:{grid:{display:false},ticks:{color:'var(--t2)'}}}}});
-new Chart(document.getElementById('ch2'),{type:'bar',data:{labels:["孟加拉BD", "肯尼亚KE", "科特CI", "加纳GH", "巴基斯坦PK", "尼日利亚NG", "坦桑尼亚TZ", "乌干达UG"],datasets:[{label:'销售收入',data:[51245, 36942, 48816, 20778, 2757, 14550, 0, 810],backgroundColor:'#4f46e5',borderRadius:6},{label:'总利润',data:[2176, 7083, 5446, 2585, 571, -1109, 0, 261],backgroundColor:'#059669',borderRadius:6}]},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{usePointStyle:true,padding:20,font:{size:12},color:'var(--text)'}}},scales:{y:{beginAtZero:true,grid:{color:'var(--bd)'},ticks:{callback:v=>'¥'+v.toLocaleString(),color:'var(--t2)'}},x:{grid:{display:false},ticks:{color:'var(--t2)'}}}}});
-new Chart(document.getElementById('ch5'),{type:'doughnut',data:{labels:["孟加拉BD", "肯尼亚KE", "科特CI", "加纳GH", "巴基斯坦PK", "尼日利亚NG", "坦桑尼亚TZ", "乌干达UG"],datasets:[{data:[10627, 30182, 2385, 7500, 0, 6941, 2215, 0],backgroundColor:["#4f46e5", "#059669", "#d97706", "#dc2626", "#7c3aed", "#0891b2", "#be185d", "#65a30d"],borderWidth:2,borderColor:'var(--card)'}]},options:{responsive:true,plugins:{legend:{position:'bottom',labels:{usePointStyle:true,padding:14,font:{size:11},color:'var(--t2)'}}}}});
-new Chart(document.getElementById('ch4'),{type:'bar',data:{labels:["孟加拉BD", "肯尼亚KE", "科特CI", "加纳GH", "巴基斯坦PK", "尼日利亚NG", "坦桑尼亚TZ", "乌干达UG"],datasets:[{label:'毛利率%',data:[4.25, 19.17, 11.16, 12.44, 20.72, -7.62, 0.0, 32.22],backgroundColor:'#7c3aed',borderRadius:6}]},options:{responsive:true,plugins:{legend:{display:false}},scales:{y:{beginAtZero:true,grid:{color:'var(--bd)'},ticks:{callback:v=>v+'%',color:'var(--t2)'}},x:{grid:{display:false},ticks:{color:'var(--t2)'}}}}});
 </script>
 </body></html>
